@@ -14,5 +14,8 @@ jobs:
     - name: Install dependencies
       run:  pip install -r requirements.txt
     - name: Test with pytest
+      env:
+        MONGODB: ${{ secrets.MONGODB }}
+        MONGODB_ID: ${{ secrets.MONGODB_ID }}
       run:
         pytest -v
