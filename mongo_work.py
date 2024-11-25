@@ -18,6 +18,7 @@ def add_patient(mrn, name):
     new_patient = Patient(id=mrn, name=name)
     answer = new_patient.save()
     print(answer)
+    return answer
 
 
 if __name__ == "__main__":
